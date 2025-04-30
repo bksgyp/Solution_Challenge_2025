@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Checkbox } from "@heroui/checkbox";
-import { Button, ButtonGroup } from "@heroui/button";
+import { Button } from "@heroui/button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <div className="flex items-center pt-32 font-bold text-2xl">
-        서비스를 이용하기 위해서<br></br>
+        서비스를 이용하기 위해서 <br />
         아래 이용약관에 동의해주세요.
       </div>
       <div className="flex items-center pt-2 font-normal text-sm">
@@ -46,10 +46,7 @@ export default function Home() {
         </Checkbox>
       </div>
       <div className="flex items-center pt-2 font-normal text-sm">
-        <Checkbox
-          isSelected={termsChecked}
-          onValueChange={setTermsChecked}
-        ></Checkbox>
+        <Checkbox isSelected={termsChecked} onValueChange={setTermsChecked} />
         <Accordion>
           <AccordionItem
             key="terms"
@@ -91,7 +88,7 @@ export default function Home() {
         </Accordion>
       </div>
       <div className="fixed bottom-8 left-0 right-0 flex justify-center w-full px-4">
-        <Button radius="full" className="w-full max-w-lg bg-[#EDEDED]">
+        <Button className="w-full max-w-lg bg-[#EDEDED]" radius="full">
           다음
         </Button>
       </div>

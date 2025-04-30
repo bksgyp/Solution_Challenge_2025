@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Providers } from "./providers";
-import { siteConfig } from "@/config/site";
 import { Roboto } from "next/font/google";
+
+import { Providers } from "./providers";
+
+import { siteConfig } from "@/config/site";
 
 // Roboto 폰트 사용
 const roboto = Roboto({
@@ -39,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" data-theme="light" style={{ colorScheme: "light" }}>
+    <html data-theme="light" lang="ko" style={{ colorScheme: "light" }}>
       <body className={`h-screen bg-background ${roboto.className}`}>
         <Providers>
           {/* 양쪽 모두 16px 마진 적용 */}
